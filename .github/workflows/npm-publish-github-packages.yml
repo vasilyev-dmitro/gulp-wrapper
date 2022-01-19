@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com
-      - run: echo "@vasilyevd:registry=https://npm.pkg.github.com" >> .npmrc
+      # - run: echo "@vasilyevd:registry=https://npm.pkg.github.com" >> .npmrc
       - run: npm ci
       - run: npm publish
         env:
