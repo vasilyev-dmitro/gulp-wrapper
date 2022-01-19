@@ -32,7 +32,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
       # - run: echo "@vasilyevd:registry=https://npm.pkg.github.com" >> .npmrc
       - run: npm ci
-      - run: npm version $GITHUB_REF_NAME
+      - run: npm --no-git-tag-version version $GITHUB_REF_NAME
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
